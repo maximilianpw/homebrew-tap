@@ -16,7 +16,6 @@ class Rmus < Formula
   end
 
   test do
-    assert_path_exists bin/"rmus"
-    assert_predicate bin/"rmus", :executable?
+    assert_match version.to_s, shell_output("#{bin}/rmus --version")
   end
 end
