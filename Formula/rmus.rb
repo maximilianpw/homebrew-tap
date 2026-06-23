@@ -2,7 +2,7 @@ class Rmus < Formula
   desc "Keyboard-driven terminal music player"
   homepage "https://github.com/maximilianpw/rmus"
   url "https://github.com/maximilianpw/rmus.git", branch: "main"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
   head "https://github.com/maximilianpw/rmus.git", branch: "main"
 
