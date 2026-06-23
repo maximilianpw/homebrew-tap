@@ -17,5 +17,8 @@ class Rmus < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/rmus --version")
+    paths_output = shell_output("#{bin}/rmus paths")
+    assert_match "config:", paths_output
+    assert_match "local cache:", paths_output
   end
 end
