@@ -1,9 +1,9 @@
 class Rmus < Formula
   desc "Keyboard-driven terminal music player"
   homepage "https://github.com/maximilianpw/rmus"
-  url "https://github.com/maximilianpw/rmus/archive/d336394cdab0e65143dbe5a6881049d6d1fe3ad3.tar.gz"
+  url "https://github.com/maximilianpw/rmus/archive/ab256b7b3f8e6e9091e68363129da97a793ba4cf.tar.gz"
   version "0.1.2"
-  sha256 "a90aefb397e6f616ca300bd8a0af2b08fcf9a9957ab2e356737a836db61185ab"
+  sha256 "83143ec1e654fa60b5ace0228d3d2ab99f04e080e14a89ef8f35799806782ceb"
   license "MIT"
   head "https://github.com/maximilianpw/rmus.git", branch: "main"
 
