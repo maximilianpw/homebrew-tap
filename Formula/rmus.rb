@@ -1,9 +1,9 @@
 class Rmus < Formula
   desc "Keyboard-driven terminal music player"
   homepage "https://github.com/maximilianpw/rmus"
-  url "https://github.com/maximilianpw/rmus/archive/2beb94bd5defc558eacad37b3a6df19e96af34d4.tar.gz"
+  url "https://github.com/maximilianpw/rmus/archive/193a2132eaba97c9eee2295a87d5e5bedc64e009.tar.gz"
   version "0.1.2"
-  sha256 "1d9737d0b05d055655667ec64404dad8a64b08fcdc458e93fb7973522a394d65"
+  sha256 "28be11a5e0279d08a4ce41f2230bf668ef411fb29386537c0a28553261abd17b"
   license "MIT"
   head "https://github.com/maximilianpw/rmus.git", branch: "main"
 
@@ -24,5 +24,6 @@ class Rmus < Formula
     assert_match "config:", paths_output
     assert_match "local cache:", paths_output
     assert_match "rmus status", shell_output("#{bin}/rmus status")
+    assert_match "Streaming accounts already absent", shell_output("#{bin}/rmus clear-accounts")
   end
 end
