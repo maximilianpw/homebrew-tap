@@ -1,9 +1,9 @@
 class Rmus < Formula
   desc "Keyboard-driven terminal music player"
   homepage "https://github.com/maximilianpw/rmus"
-  url "https://github.com/maximilianpw/rmus/archive/8464e5b82dd2ac6380b896b7de36d836dd36d1f0.tar.gz"
+  url "https://github.com/maximilianpw/rmus/archive/2beb94bd5defc558eacad37b3a6df19e96af34d4.tar.gz"
   version "0.1.2"
-  sha256 "2029f2501775fc2fefd11d744df99a983cc35c3b1cc69c0d429bfedfc16368d5"
+  sha256 "1d9737d0b05d055655667ec64404dad8a64b08fcdc458e93fb7973522a394d65"
   license "MIT"
   head "https://github.com/maximilianpw/rmus.git", branch: "main"
 
@@ -23,5 +23,6 @@ class Rmus < Formula
     paths_output = shell_output("#{bin}/rmus paths")
     assert_match "config:", paths_output
     assert_match "local cache:", paths_output
+    assert_match "rmus status", shell_output("#{bin}/rmus status")
   end
 end
