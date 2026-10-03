@@ -1,25 +1,25 @@
 class Loggle < Formula
   desc "A terminal log viewer for local, newline-delimited logs."
   homepage "https://github.com/maximilianpw/loggle"
-  version "0.1.3"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/maximilianpw/loggle/releases/download/v0.1.3/loggle-aarch64-apple-darwin.tar.xz"
-      sha256 "293daa603f670a3476c8888c0988c17d4bfbbf39aaa9bdc26dd6f15c7a07aff6"
+      url "https://github.com/maximilianpw/loggle/releases/download/v0.2.0/loggle-aarch64-apple-darwin.tar.xz"
+      sha256 "a7caa9634b90f2c84f55b081bec46d496546223611978ea0085a33957e47fe32"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/maximilianpw/loggle/releases/download/v0.1.3/loggle-x86_64-apple-darwin.tar.xz"
-      sha256 "87a14b744231bc81726747a048bcde731553f43575a288df7964d4e861892b43"
+      url "https://github.com/maximilianpw/loggle/releases/download/v0.2.0/loggle-x86_64-apple-darwin.tar.xz"
+      sha256 "c143b37adba03f3748b6666de9d6ae873b775751f7c5902afe36feafade57a91"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/maximilianpw/loggle/releases/download/v0.1.3/loggle-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "08c1e436985fb18e78d5e9ab623adde0ecac04eadc8e87dfc02d0c07e209f1dd"
+      url "https://github.com/maximilianpw/loggle/releases/download/v0.2.0/loggle-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "e89e5202634fe99e242b5cec64766b0d9ef161db14759ff4f06a75afcd5be263"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/maximilianpw/loggle/releases/download/v0.1.3/loggle-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "edf33ff7c773ad57e334036fe0eef7576bca51d6d3a0183cfa98f7dc7fe00740"
+      url "https://github.com/maximilianpw/loggle/releases/download/v0.2.0/loggle-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "eb4b51822a4915c87e8a0156113002adde3bca832e2f2ed8fed1b6638a396fa8"
     end
   end
   license "MIT"
@@ -47,10 +47,18 @@ class Loggle < Formula
   end
 
   def install
-    bin.install "loggle" if OS.mac? && Hardware::CPU.arm?
-    bin.install "loggle" if OS.mac? && Hardware::CPU.intel?
-    bin.install "loggle" if OS.linux? && Hardware::CPU.arm?
-    bin.install "loggle" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "loggle"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "loggle"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "loggle"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "loggle"
+    end
 
     install_binary_aliases!
 
